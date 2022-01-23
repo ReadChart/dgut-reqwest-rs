@@ -29,6 +29,7 @@ impl std::error::Error for GetSessionIDError {}
 #[derive(Debug, Clone)]
 pub enum AuthenticationError {
     TokenExtractionFailure,
+    EmptyCredentialFailure,
 }
 
 impl std::fmt::Display for AuthenticationError {
@@ -45,6 +46,7 @@ impl AuthenticationError {
     pub fn value(&self) -> &str {
         match *self {
             AuthenticationError::TokenExtractionFailure => "Failed To Extract Personal Token",
+            AuthenticationError::EmptyCredentialFailure => "Username Or Password Is Empty",
             _ => "Other Error",
         }
     }

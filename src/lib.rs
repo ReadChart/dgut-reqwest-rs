@@ -10,10 +10,15 @@ mod errors;
 mod structs;
 
 pub fn get_personal_cas_token(criteria: Criteria, username: &str, password: &str) -> Result<String, AuthenticationError> {
-    let resp = common_login(criteria, username, password);
-    match resp {
-        Ok(resp) => Ok(resp),
-        _ => Err(AuthenticationError::TokenExtractionFailure)
+    match username.is_empty() || password.is_empty() {
+        true => Err(AuthenticationError::EmptyCredentialFailure),
+        false => {
+            let resp = common_login(criteria, username, password);
+            match resp {
+                Ok(resp) => Ok(resp),
+                _ => Err(AuthenticationError::TokenExtractionFailure)
+            }
+        },
     }
 }
 

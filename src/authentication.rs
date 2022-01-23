@@ -1,6 +1,7 @@
 use super::errors::GetSessionIDError;
 use crate::structs::Criteria;
 use reqwest::header;
+
 pub fn common_login(
     criteria: Criteria,
     username: &str,
