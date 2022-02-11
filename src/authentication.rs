@@ -2,6 +2,21 @@ use super::errors::GetSessionIDError;
 use crate::structs::Criteria;
 use reqwest::header;
 
+///
+///
+/// # Arguments
+///
+/// * `criteria`: Login Criteria, like yqfk-daka, sa, etc.
+/// * `username`: Login Username
+/// * `password`: Login Password
+///
+/// returns: Result<String, Box<dyn Error, Global>>
+///
+/// # Examples
+///
+/// ```
+/// let login_token = authentication::common_login(Criteria::YQFK_DAKA, "201800000000", "p45sw07d");
+/// ```
 pub fn common_login(
     criteria: Criteria,
     username: &str,

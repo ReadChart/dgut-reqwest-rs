@@ -1,5 +1,6 @@
 [package]
 name = "dgut-reqwest"
+license = "GPLv3"
 version = "0.1.0"
 edition = "2021"
 authors = ["Richard Tung <zqdbyct@gmail.com>"]
