@@ -25,16 +25,6 @@ pub fn get_personal_cas_token(criteria: Criteria, username: &str, password: &str
 #[cfg(test)]
 mod tests {
     use std::collections::HashMap;
-
-    #[tokio::test]
-    async fn connection_test() -> Result<(), Box<dyn std::error::Error>>{
-        let resp = reqwest::get("https://httpbin.org/ip")
-            .await?
-            .json::<HashMap<String, String>>()
-            .await?;
-        println!("{:#?}", resp);
-        Ok(())
-    }
     #[test]
     fn common_login_test() -> Result<(), Box<dyn std::error::Error>>{
         // let token = common_login(Criteria::YQFK_DAKA, "", "")?;
