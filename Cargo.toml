@@ -4,6 +4,8 @@ license = "GPLv3"
 version = "0.1.0"
 edition = "2021"
 authors = ["Richard Tung <zqdbyct@gmail.com>"]
+description = "dgut-reqwest but in rust, blazingly fast but maybe useless"
+repository = "https://github.com/ReadChart/dgut-reqwest-rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
