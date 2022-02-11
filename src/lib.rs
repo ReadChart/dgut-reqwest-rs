@@ -25,9 +25,6 @@ pub fn get_personal_cas_token(criteria: Criteria, username: &str, password: &str
 #[cfg(test)]
 mod tests {
     use std::collections::HashMap;
-    use crate::authentication::common_login;
-    use crate::get_personal_cas_token;
-    use crate::structs::Criteria;
 
     #[tokio::test]
     async fn connection_test() -> Result<(), Box<dyn std::error::Error>>{
