@@ -3,11 +3,11 @@ use crate::errors::AuthenticationError;
 use crate::structs::Criteria;
 
 #[allow(dead_code)]
-mod authentication;
+pub mod authentication;
 #[allow(dead_code, unreachable_patterns)]
-mod errors;
+pub mod errors;
 #[allow(dead_code)]
-mod structs;
+pub mod structs;
 
 pub fn get_personal_cas_token(criteria: Criteria, username: &str, password: &str) -> Result<String, AuthenticationError> {
     match username.is_empty() || password.is_empty() {
