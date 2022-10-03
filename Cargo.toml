@@ -1,7 +1,7 @@
 [package]
 name = "dgut-reqwest"
 license = "GPL-3.0-or-later"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Richard Tung <zqdbyct@gmail.com>"]
 description = "dgut-reqwest but in rust, blazingly fast but maybe useless"
